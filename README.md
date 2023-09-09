@@ -6,3 +6,8 @@
 5. install initial packages : npm install express mysql cors nodemon bcrypt cookie-parser jsonwebtoken
 6. create .gitignore file add server/node-modules 
 
+# Frontend
+npm init vite
+  cd client
+  npm install
+  npm run dev
