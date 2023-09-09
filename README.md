@@ -11,3 +11,5 @@ npm init vite
   cd client
   npm install
   npm run dev
+install and configure tailwind :
+ ref: https://tailwindcss.com/docs/guides/vite#react
