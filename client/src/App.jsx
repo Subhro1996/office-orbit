@@ -1,5 +1,8 @@
+import { useState } from "react"
+
 const inputClass = 'w-3/4 rounded shadow py-3 m-4 text-left px-2 hover:ring-1 focus:ring-2 focus:ring-indigo-600'
 function App() {
+  const [email, setEmail] = useState('')
   return (
     <div className="flex flex-col justify-center items-center min-h-screen py-12 px-6 bg-slate-200">
       <h2 className="text-center text-2xl font-semibold">Sign in to your account</h2>
@@ -9,6 +12,7 @@ function App() {
             <label className="px-4 font-semibold text-gray-600" >Email Address :</label>
             <div className="">
               <input type="email" placeholder="enter email" name="email" 
+               value={email} onChange={(e) => setEmail(e.target.value)}
                className={inputClass}
               />
             </div>
@@ -22,7 +26,12 @@ function App() {
             </div>
           </div>
           <div className="px-4 m-4 float-right">
-            <button type="button" className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:shadow-lg" >Sign In</button>
+            <button type="button" 
+            onClick={() => console.log(`logged in as ${email}`)}
+            className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:shadow-lg" 
+            >
+              Sign In
+            </button>
           </div>
         </form>
       </div>
