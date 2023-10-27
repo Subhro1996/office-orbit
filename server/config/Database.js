@@ -1,4 +1,4 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize('my_database', 'john', 'doe', {})
+const sequelize = new Sequelize('my_database', 'root', '', {})
 console.log(sequelize)
